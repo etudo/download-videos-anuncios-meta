@@ -5,7 +5,7 @@
 (function () {
   'use strict';
 
-  // ---- Bookmarklet Code (raw) ----
+  // ---- Bookmarklet generation (fallback - href already in HTML) ----
   function buildBookmarkletCode() {
     var p = [];
     p.push('(function(){');
@@ -22,7 +22,6 @@
     return p.join('');
   }
 
-  // ---- Minify ----
   function minifyJS(code) {
     return code
       .replace(/\/\/.*(\n|$)/g, '')
@@ -32,17 +31,12 @@
       .trim();
   }
 
-  // ---- Generate bookmarklet href ----
-  function generateBookmarkletHref() {
+  // ---- Fallback: only set href if not already present ----
+  var btn = document.getElementById('bookmarkletBtn');
+  if (btn && !btn.getAttribute('href')) {
     var raw = buildBookmarkletCode();
     var min = minifyJS(raw);
-    return 'javascript:' + encodeURIComponent(min);
-  }
-
-  // ---- Inject href into anchor (synchronous) ----
-  var btn = document.getElementById('bookmarkletBtn');
-  if (btn) {
-    btn.href = generateBookmarkletHref();
+    btn.href = 'javascript:' + encodeURIComponent(min);
   }
 
   // ---- Fallback toggle ----
