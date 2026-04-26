@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Baixar Vídeos da Biblioteca de Anúncios da Meta — ManyConvert</title>
+  <meta name="description" content="Ferramenta gratuita para baixar vídeos da Meta Ad Library. Instale o bookmarklet e baixe vídeos de anúncios com um clique.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container header-inner">
+      <a href="#" class="logo">ManyConvert</a>
+      <nav class="nav" id="navMenu">
+        <a href="#">Blog</a>
+        <a href="#">Cases</a>
+        <a href="#">Soluções</a>
+        <a href="#">Planos</a>
+        <a href="#">Na Mídia</a>
+        <a href="#">Contato</a>
+      </nav>
+      <div class="header-actions">
+        <a href="#" class="btn btn-outline">Acessar</a>
+        <a href="#" class="btn btn-primary">Começar Agora</a>
+      </div>
+      <button class="hamburger" id="hamburgerBtn" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- BREADCRUMB -->
+  <nav class="breadcrumb">
+    <div class="container">
+      <a href="#">Home</a> / Baixar Vídeos da Biblioteca de Anúncios da Meta
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1>Baixar Vídeos da Biblioteca de Anúncios da Meta</h1>
+        <p class="hero-subtitle">
+          Instale o botão abaixo nos seus favoritos. Depois, abra qualquer anúncio na Meta Ad Library, dê play no vídeo e clique no botão — o link de download aparece na hora.
+        </p>
+
+        <!-- CARD PRINCIPAL -->
+        <div class="tool-card">
+
+          <div class="step">
+            <h2 class="step-title">Passo 1 — Instale o botão</h2>
+            <p>Arraste o botão abaixo para a sua barra de favoritos do navegador:</p>
+            <div class="bookmarklet-wrapper">
+              <a class="bookmarklet-btn" id="bookmarkletBtn" draggable="true">
+                🎬 Baixar Vídeo Meta
+              </a>
+            </div>
+            <div class="tip">
+              <strong>💡 Dica:</strong> Se a barra de favoritos não estiver visível, pressione <kbd>Ctrl+Shift+B</kbd> para exibi-la.
+            </div>
+          </div>
+
+          <div class="step-divider"></div>
+
+          <div class="step">
+            <h2 class="step-title">Passo 2 — Use na Ad Library</h2>
+            <ol class="step-list">
+              <li>Acesse <a href="https://facebook.com/ads/library" target="_blank" rel="noopener">facebook.com/ads/library</a></li>
+              <li>Encontre um anúncio com vídeo</li>
+              <li>Dê play no vídeo</li>
+              <li>Clique no bookmarklet instalado</li>
+              <li>Copie o link que aparecer e baixe</li>
+            </ol>
+          </div>
+
+        </div>
+
+        <!-- FALLBACK COLLAPSIBLE -->
+        <div class="fallback-section">
+          <button class="fallback-toggle" id="fallbackToggle" aria-expanded="false">
+            <span>Não conseguiu instalar o bookmarklet? Use o método alternativo</span>
+            <svg class="chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="fallback-content" id="fallbackContent">
+
+            <div class="fallback-card">
+              <div class="fallback-icon">▶️</div>
+              <div>
+                <h3>Passo 1 — Dê play e clique com botão direito</h3>
+                <p>Abra o anúncio na Meta Ad Library, dê play no vídeo e clique com o botão direito diretamente sobre ele. Selecione "Salvar vídeo como..." — no Chrome e Firefox isso já resolve na maioria dos casos.</p>
+              </div>
+            </div>
+
+            <div class="fallback-card">
+              <div class="fallback-icon">🛠️</div>
+              <div>
+                <h3>Passo 2 — Se não aparecer a opção de salvar</h3>
+                <p>Pressione <kbd>F12</kbd> para abrir o DevTools, vá na aba "Network", filtre por <kbd>mp4</kbd> na barra de busca e clique no arquivo de vídeo que aparecer. Copie o endereço completo.</p>
+              </div>
+            </div>
+
+            <div class="fallback-card">
+              <div class="fallback-icon">⬇️</div>
+              <div>
+                <h3>Passo 3 — Baixe pelo link</h3>
+                <p>Cole a URL copiada na barra do navegador, pressione <kbd>Enter</kbd> e use <kbd>Ctrl+S</kbd> para salvar o vídeo no seu computador.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ / SEO -->
+    <section class="faq">
+      <div class="container">
+        <div class="faq-item">
+          <h2>O que é a Biblioteca de Anúncios da Meta?</h2>
+          <p>A <a href="https://facebook.com/ads/library" target="_blank" rel="noopener">Meta Ad Library</a> (Biblioteca de Anúncios) é uma ferramenta transparente criada pelo Facebook (Meta) que permite qualquer pessoa visualizar todos os anúncios ativos rodando nas plataformas Facebook, Instagram, Messenger e Audience Network. Ela foi lançada em 2019 como parte dos esforços de transparência publicitária da empresa. Você pode pesquisar anúncios por país, anunciante ou palavra-chave, e ver detalhes como data de veiculação, plataformas e o próprio conteúdo criativo — incluindo vídeos.</p>
+        </div>
+
+        <div class="faq-item">
+          <h2>Para que serve baixar vídeos de anúncios?</h2>
+          <p>Baixar vídeos da Meta Ad Library é uma prática comum entre profissionais de marketing digital, analistas de concorrência e criadores de conteúdo. Com os vídeos salvos localmente, é possível: analisar a criativa dos concorrentes em detalhes, estudar padrões de edição, roteiro e storytelling, criar um banco de referências para campanhas próprias, compartilhar com equipes que não têm acesso direto à plataforma, e usar os vídeos como inspiração (nunca cópia) para novas peças publicitárias.</p>
+        </div>
+
+        <div class="faq-item">
+          <h2>O bookmarklet é seguro?</h2>
+          <p>Sim, completamente seguro. O bookmarklet é um código JavaScript que roda exclusivamente no seu navegador. Nenhum dado é enviado para servidores externos. O código apenas identifica o elemento de vídeo na página da Meta Ad Library e exibe o link direto para você baixar. Não há coleta de informações, nem rastreamento, nem comunicação com terceiros. Tudo acontece localmente, no seu computador. Você pode inspecionar o código à vontade — ele é aberto e transparente.</p>
+        </div>
+
+        <div class="faq-item">
+          <h2>Funciona em qual navegador?</h2>
+          <p>O bookmarklet funciona em todos os navegadores modernos: Google Chrome, Mozilla Firefox, Microsoft Edge, Brave, Opera e Vivaldi. A instalação é idêntica em todos: basta arrastar o botão azul para a barra de favoritos. No Safari, a instalação de bookmarklets requer um passo extra (é necessário exibir a barra de favoritos e arrastar o link mantendo a tecla Option pressionada).</p>
+        </div>
+
+        <!-- CTA -->
+        <div class="cta-card">
+          <h2>Começar Agora com a ManyConvert</h2>
+          <p>Transforme suas campanhas com inteligência artificial e humanização especializada.</p>
+          <a href="#" class="btn btn-primary btn-lg">Fale Conosco</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="#" class="logo logo-light">ManyConvert</a>
+        <p>Converta mais Vendas com IA & Humanização Especialista</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navegação</h4>
+        <ul>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Cases</a></li>
+          <li><a href="#">Soluções</a></li>
+          <li><a href="#">Planos</a></li>
+          <li><a href="#">Na Mídia</a></li>
+          <li><a href="#">Contato</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contato</h4>
+        <ul>
+          <li><a href="#">contato@manyconvert.com</a></li>
+          <li><a href="#">(51) 99999-8888</a></li>
+          <li><a href="#">Porto Alegre, RS</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Redes Sociais</h4>
+        <ul>
+          <li><a href="#">LinkedIn</a></li>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">YouTube</a></li>
+          <li><a href="#">Facebook</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        &copy; 2026 ManyConvert Tecnologia LTDA
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
